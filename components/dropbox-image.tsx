@@ -30,8 +30,7 @@ export default function DropboxImage({ image }: DropboxImageProps) {
           onClick={() => console.log("Delete", image.name)}
           color="red"
           className="w-full h-full"
-          onPointerEnterCapture={() => {}} // 이벤트 핸들러 추가
-          onPointerLeaveCapture={() => {}} // 이벤트 핸들러 추가
+          {...({} as any)} // 타입 강제 무시
         >
           <i className="fas fa-trash text-base" />
         </IconButton>
