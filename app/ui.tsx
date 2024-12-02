@@ -1,6 +1,7 @@
 "use client";
 
 import DropboxImageList from "components/dropbox-image-list";
+import FileDragDropZone from "components/file-dragdropzone";
 import Logo from "components/logo";
 import SearchComponent from "components/search-component";
 import Image from "next/image";
@@ -12,7 +13,12 @@ export default function UI() {
   return (
     <main className="flex w-full p-2 flex-col gap-4">
       <Logo />
-      <SearchComponent />
+      <SearchComponent
+        searchInput={searchInput}
+        setSearchInput={setSearchInput}
+      />
+      <FileDragDropZone />
+      <DropboxImageList />
     </main>
   );
 }
