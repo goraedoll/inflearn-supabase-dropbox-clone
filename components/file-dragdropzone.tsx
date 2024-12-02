@@ -21,11 +21,11 @@ export default function FileDragDropZone() {
     <form
       onSubmit={async (e) => {
         e.preventDefault();
-        const file = fileRef.current.files?.[0];
+        const file = fileRef.current?.files?.[0];
         if (file) {
           const formData = new FormData();
           formData.append("file", file);
-          const result = await uploadImageMutation.mutate(formData);
+          const result = await uploadImageMutation.mutateAsync(formData); // mutate 대신 mutateAsync
           console.log(result);
         }
       }}
@@ -33,7 +33,12 @@ export default function FileDragDropZone() {
     >
       <input ref={fileRef} type="file" className="" aria-label="Upload files" />
       <p>파일을 여기에 끌어다 놓거나 클릭하여 업로드하세요.</p>
-      <Button loading={uploadImageMutation.isPending} type="submit">
+      <Button
+        loading={uploadImageMutation.isLoading} // 수정된 부분
+        type="submit"
+        onPointerEnterCapture={() => {}} // 빈 함수 추가
+        onPointerLeaveCapture={() => {}} // 빈 함수 추가
+      >
         파일 업로드
       </Button>
     </form>
