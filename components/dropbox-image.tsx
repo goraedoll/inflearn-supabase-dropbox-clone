@@ -13,9 +13,9 @@ export default function DropboxImage() {
       </div>
 
       <div>cutedog.jpeg</div>
-      <div className="absolute top-5 right-5">
-        <IconButton onClick={() => {}} color="red">
-          <i className="fas fa-trash" />
+      <div className="absolute top-5 right-5 w-7 h-7">
+        <IconButton onClick={() => {}} color="red" className="w-full h-full">
+          <i className="fas fa-trash text-base" />
         </IconButton>
       </div>
     </div>
