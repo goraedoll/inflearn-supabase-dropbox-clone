@@ -3,7 +3,6 @@
 import { IconButton } from "@material-tailwind/react";
 import { getImageUrl } from "app/utils/supabase/storage";
 
-// TypeScript로 props 타입을 명시합니다.
 type DropboxImageProps = {
   image: {
     name: string;
@@ -31,7 +30,8 @@ export default function DropboxImage({ image }: DropboxImageProps) {
           onClick={() => console.log("Delete", image.name)}
           color="red"
           className="w-full h-full"
-          placeholder="Delete Button" // 필수 props 추가
+          onPointerEnterCapture={() => {}} // 이벤트 핸들러 추가
+          onPointerLeaveCapture={() => {}} // 이벤트 핸들러 추가
         >
           <i className="fas fa-trash text-base" />
         </IconButton>
