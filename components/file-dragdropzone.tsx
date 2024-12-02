@@ -36,8 +36,7 @@ export default function FileDragDropZone() {
       <Button
         loading={uploadImageMutation.isLoading} // 수정된 부분
         type="submit"
-        onPointerEnterCapture={() => {}} // 빈 함수 추가
-        onPointerLeaveCapture={() => {}} // 빈 함수 추가
+        {...({} as any)} // 타입 강제 무시
       >
         파일 업로드
       </Button>
