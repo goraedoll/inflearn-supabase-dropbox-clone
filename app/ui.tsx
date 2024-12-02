@@ -1,5 +1,6 @@
 "use client";
 
+import DropboxImageList from "components/dropbox-image-list";
 import Logo from "components/logo";
 import SearchComponent from "components/search-component";
 import Image from "next/image";

@@ -1,4 +1,6 @@
+import FileDragDropZone from "components/file-dragdropzone";
 import UI from "./ui";
+import DropboxImageList from "./../components/dropbox-image-list";
 
 export const metadata = {
   title: "Minibox",
@@ -6,5 +8,11 @@ export const metadata = {
 };
 
 export default function Home() {
-  return <UI />;
+  return (
+    <>
+      <UI />
+      <FileDragDropZone />
+      <DropboxImageList />
+    </>
+  );
 }
